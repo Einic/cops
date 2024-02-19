@@ -96,6 +96,7 @@ build: linux-build ## Build manager linux rpm binary.
 clean:
 	rm -rf pkg-build
 	rm -rf logs
+	rm -rf bin/README.md
 
 ##@ Deployment
 

@@ -1,7 +1,7 @@
 /**
  * @Author: Einic <einicyeo AT gmail.com>
  * @Description:
- * @File: PrintTable
+ * @File: table
  * @Version: 1.0.0
  * @Date: 2024/2/8 15:25
  * @BLOG:  https://www.infvie.com
@@ -9,12 +9,12 @@
  *     @https://github.com/Einic/EnvoyinStack
  */
 
-package PrintTable
+package table
 
 import (
 	"fmt"
-	AlterResource "github.com/Einic/cops/Resources"
 	"github.com/Einic/cops/lib"
+	AlterResource "github.com/Einic/cops/resources"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
 	"os"

@@ -14,8 +14,8 @@ package mode
 import (
 	"flag"
 	"fmt"
-	"github.com/Einic/cops/PrintTable"
 	"github.com/Einic/cops/lib"
+	"github.com/Einic/cops/table"
 	"github.com/Einic/cops/utils"
 	"github.com/Einic/cops/zaplog"
 	"go.uber.org/zap"
@@ -134,5 +134,5 @@ func executeCommand(logger zaplog.Logger, args ...string) {
 		}
 		updates = append(updates, update)
 	}
-	PrintTable.PrintUpdateTable(updates)
+	table.PrintUpdateTable(updates)
 }
