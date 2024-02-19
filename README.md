@@ -1,11 +1,11 @@
 # Function brief description
-1. According to the example.csv file, you can make copy and resource-related adjustments to a container resource of the deploy/sts type;
-2. If the current resource is less than the changed resource, it will be marked green; if the current resource is greater than the changed resource, it will be marked red;
-3. Note that to obtain service quality by default, the app label needs to be standardized, that is, app=workload name;
+1. According to the example.csv file, you can make replicas and resource-related adjustments to a container resource of the deploy/sts type.
+2. If the current resource is less than the changed resource, it will be marked green; if the current resource is greater than the changed resource, it will be marked red.
+3. Note that to obtain service quality by default, the app label needs to be standardized, that is, app=workload name.
 ![run](img/run.png)
 
 # Batch resource changes
-1. Only need to be sorted into example.csv, as shown below
+1. Only need to be sorted into example.csv, as shown below.
 
 ```
 workload,containers_name,worktype,namespace,replicas,limits_cpu,limits_memory,requests_cpu,requests_memory
@@ -14,7 +14,7 @@ locust-master,locust-master,deployment,sample-application,2,400m,512Mi,400m,512M
 locust-worker,locust-worker,deployment,sample-application,2,300m,215Mi,300m,215Mi
 ```
 
-2. Execute alter resource changes
+2. Execute alter resource changes.
 
 ```
 [root@tcs-192-168-200-132 cops]# ./bin/cops -a /root/.kube/config ./example.csv
