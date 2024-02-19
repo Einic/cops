@@ -1,0 +1,34 @@
+{
+  "name": "cops",
+  "version": "1.0.0",
+  "release": "1.el7",
+  "arch": "x86_64",
+  "summary": "Einic Yeo",
+  "description": "       Cloud Native Ops Assistant.",
+  "license": "Infvie License",
+  "url": "https://github.com/Einic/!name!",
+  "directories": [
+    {
+      "path": "/usr/local/!name!/",
+      "permissions": "0755"
+    }
+  ],
+  "files": [
+    {
+      "from": "./bin/!name!",
+      "to": "/usr/local/!name!",
+      "base": "",
+      "type": ""
+    },
+    {
+      "from": "README.md",
+      "to": "/usr/local/!name!",
+      "base": "",
+      "type": ""
+    }
+  ],
+  "envs": {
+    "CMD": "/usr/local/cops/",
+    "PATH": "$CMD/bin:$PATH"
+  }
+}
