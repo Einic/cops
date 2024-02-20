@@ -1,4 +1,4 @@
 workload,containers_name,worktype,namespace,replicas,limits_cpu,limits_memory,requests_cpu,requests_memory
-hotrod,hotrod,deployment,sample-application,1,100m,256Mi,100m,256Mi
-locust-master,locust-master,deployment,sample-application,2,300m,512Mi,300m,512Mi
-locust-worker,locust-worker,deployment,sample-application,2,400m,512Mi,400m,512Mi
+hotrod,hotrod,deployment,sample-application,2,200m,512Mi,200m,512Mi
+locust-master,locust-master,deployment,sample-application,1,400m,512Mi,400m,512Mi
+locust-worker,locust-worker,deployment,sample-application,2,200m,256Mi,200m,256Mi

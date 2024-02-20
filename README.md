@@ -3,10 +3,10 @@
 2. If the current resource is less than the changed resource, it will be marked green; if the current resource is greater than the changed resource, it will be marked red.
 3. Note that to obtain service quality by default, the app label needs to be standardized, that is, app=workload name.
 
-![Image text](https://github.com/Einic/cops/blob/main/img/run.png)  
-
 # Batch resource changes
 1. Only need to be sorted into example.csv, as shown below.
+
+![Image text](https://mirrors.infvie.org/image/cops/example.png)
 
 ```
 workload,containers_name,worktype,namespace,replicas,limits_cpu,limits_memory,requests_cpu,requests_memory
@@ -18,15 +18,7 @@ locust-worker,locust-worker,deployment,sample-application,2,300m,215Mi,300m,215M
 2. Execute alter resource changes.
 
 ```
-[root@tcs-192-168-200-132 cops]# ./bin/cops -a /root/.kube/config ./example.csv
-┏━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━┓
-┃   ┃ DATATIME            ┃ WORKLOAD      ┃ CONTAINERNAME ┃ WORKTYPE ┃ NAMESPACE          ┃ REPLICAS ┃ REQUESTS (CPU) ┃ REQUESTS (MEMORY) ┃ LIMITS (CPU) ┃ LIMITS (MEMORY) ┃ PODQOS     ┃ RUNSTATUS ┃ ALTERSTATUS ┃
-┣━━━╋━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━━━┫
-┃ 1 ┃ 2024-02-19 16:48:50 ┃ hotrod        ┃ hotrod        ┃ deploy   ┃ sample-application ┃ 1 -> 2   ┃ 100m -> 100m   ┃ 256Mi -> 216Mi    ┃ 100m -> 100m ┃ 256Mi -> 216Mi  ┃ Guaranteed ┃ Available ┃ Success     ┃
-┣━━━╋━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━━━┫
-┃ 2 ┃ 2024-02-19 16:49:10 ┃ locust-master ┃ locust-master ┃ deploy   ┃ sample-application ┃ 2 -> 1   ┃ 400m -> 300m   ┃ 512Mi -> 512Mi    ┃ 400m -> 300m ┃ 512Mi -> 512Mi  ┃ Guaranteed ┃ Available ┃ Success     ┃
-┣━━━╋━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━━━┫
-┃ 3 ┃ 2024-02-19 16:49:10 ┃ locust-worker ┃ locust-worker ┃ deploy   ┃ sample-application ┃ 2 -> 2   ┃ 300m -> 300m   ┃ 215Mi -> 512Mi    ┃ 300m -> 300m ┃ 215Mi -> 512Mi  ┃ Guaranteed ┃ Available ┃ Success     ┃
-┗━━━┻━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━━━┛
-
+./bin/cops -a /root/.kube/config ./example.csv
 ```
+
+![Image text](https://mirrors.infvie.org/image/cops/cops-run.png)
