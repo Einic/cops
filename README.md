@@ -2,7 +2,8 @@
 1. According to the example.csv file, you can make replicas and resource-related adjustments to a container resource of the deploy/sts type.
 2. If the current resource is less than the changed resource, it will be marked green; if the current resource is greater than the changed resource, it will be marked red.
 3. Note that to obtain service quality by default, the app label needs to be standardized, that is, app=workload name.
-![run](img/run.png)
+
+![image](https://github.com/Einic/cops/blob/main/img/run.png)
 
 # Batch resource changes
 1. Only need to be sorted into example.csv, as shown below.
